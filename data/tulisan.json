@@ -22,5 +22,21 @@
     "kategori": "Fiksi Spekulatif",
     "ringkasan": "Cerita ini berpusat pada seorang wanita muda bernama Bunga yang tiba di 'Kota Sakrifis'. Sejak awal, ia merasa sangat tidak nyaman dengan keramahan yang 'ganjil' dan terlalu cepat dari para penghuni kota , termasuk seorang pria tak dikenal yang langsung mengajaknya menjadi pasangan saat sarapan.",
     "link_artikel": "assets/pdf/biarkan-aku.pdf"
+  },
+  {
+    "id": 4,
+    "judul": "Sang Alkemis Sunyi",
+    "tanggal": "",
+    "kategori": "Fiksi Spekulatif",
+    "ringkasan": "Alkemis, seorang manusia dengan kesadaran tinggi mengalami berbagai penindasan secara moral.",
+    "link_artikel": "assets/pdf/sang-alkemis-sunyi.pdf"
+  },
+  {
+    "id": 5,
+    "judul": "Kepalaku Berisik Sekali",
+    "tanggal": "",
+    "kategori": "Fiksi Spekulatif",
+    "ringkasan": "Proses perjalanan Aras dalam menghadapi bisikan-bisikan yang berlari-lari didalam kepalanya.",
+    "link_artikel": "assets/pdf/kepalaku-berisik-sekali.pdf"
   }
 ]

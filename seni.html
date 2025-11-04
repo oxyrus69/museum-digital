@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karya Tulisan - Museum Digital</title>
+    <title>Galeri Seni - Museum Digital</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,8 +19,8 @@
         <ul class="nav-links">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="galeri.html">Galeri Sistem</a></li>
-          <li><a href="seni.html">Galeri Seni</a></li>
-          <li><a href="tulisan.html" class="active">Karya Tulisan</a></li>
+          <li><a href="seni.html" class="active">Galeri Seni</a></li>
+          <li><a href="tulisan.html">Karya Tulisan</a></li>
           <li><a href="tentang.html">Tentang Saya</a></li>
         </ul>
         <button class="nav-toggle" aria-label="Buka menu">
@@ -33,17 +33,31 @@
 
     <main>
       <section class="container page-header">
-        <h1>Karya Tulisan</h1>
+        <h1>Galeri Seni</h1>
         <p>
-          Kumpulan ide, refleksi, dan tutorial yang saya dokumentasikan dalam
-          bentuk tulisan.
+          Kumpulan karya visual, ilustrasi, dan desain grafis yang pernah saya
+          buat.
         </p>
       </section>
 
-      <section id="tulisan-list" class="container tulisan-list-container">
-        <p class="loading-text">Memuat tulisan...</p>
+      <section id="seni-grid" class="container galeri-grid-container">
+        <p class="loading-text">Memuat galeri seni...</p>
       </section>
     </main>
+
+    <div id="seni-modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="modal-close" aria-label="Tutup"
+          >&times;</span
+        >
+        <img id="modal-img" src="" alt="Detail Karya Seni" />
+        <h2 id="modal-title">Judul Karya</h2>
+        <span id="modal-media" class="modal-media">Media</span>
+        <p id="modal-desc">Deskripsi singkat akan muncul di sini.</p>
+        <h3>Cerita di Balik Karya</h3>
+        <p id="modal-story">Cerita atau inspirasi akan muncul di sini.</p>
+      </div>
+    </div>
 
     <footer>
       <div class="container">

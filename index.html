@@ -5,59 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Museum Digital - Beranda</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <nav class="container">
-        <a href="index.html" class="logo">Museum Digital</a>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Beranda</a></li>
-          <li><a href="galeri.html">Galeri Sistem</a></li>
-          <li><a href="tulisan.html">Karya Tulisan</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Buka menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </header>
+    <section class="hero">
+      <div id="hero-slideshow-container"></div>
+
+      <div class="hero-overlay-gradient"></div>
+
+      <header>
+        <nav class="container">
+          <a href="index.html" class="logo">Museum Digital</a>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="galeri.html">Galeri Sistem</a></li>
+            <li><a href="seni.html">Galeri Seni</a></li>
+            <li><a href="tulisan.html">Karya Tulisan</a></li>
+            <li><a href="tentang.html">Tentang Saya</a></li>
+          </ul>
+          <button class="nav-toggle" aria-label="Buka menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </header>
+
+      <div class="hero-content container">
+        <h1>Arsip Digital Karya Saya</h1>
+        <p>
+          Sebuah museum pribadi untuk mengabadikan perjalanan, karya sistem,
+          seni, dan pemikiran.
+        </p>
+      </div>
+    </section>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Selamat Datang di Museum Digital Saya.</h1>
-          <p>
-            Ini adalah tempat saya mengarsipkan seluruh perjalanan dan karya,
-            berupa sistem yang pernah saya bangun dan pemikiran yang pernah saya
-            tulis.
-          </p>
-          <div class="hero-buttons">
-            <a href="galeri.html" class="btn btn-primary"
-              >Lihat Galeri Sistem</a
-            >
-            <a href="tulisan.html" class="btn btn-secondary">Baca Tulisan</a>
+      <section class="container card-grid">
+        <a href="galeri.html" class="main-card">
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=500&fit=crop"
+            alt="Galeri Sistem"
+          />
+          <div class="card-overlay">
+            <h3>Galeri Sistem</h3>
           </div>
-        </div>
+        </a>
+        <a href="seni.html" class="main-card">
+          <img src="assets/images/mata-uang-kutukan.jpg" alt="Galeri Seni" />
+          <div class="card-overlay">
+            <h3>Galeri Seni</h3>
+          </div>
+        </a>
+        <a href="tulisan.html" class="main-card">
+          <img
+            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=500&fit=crop"
+            alt="Karya Tulisan"
+          />
+          <div class="card-overlay">
+            <h3>Karya Tulisan</h3>
+          </div>
+        </a>
       </section>
 
-      <section class="container content-preview">
-        <h2>Pratinjau Karya</h2>
-        <p>Beberapa karya terbaru yang telah saya arsipkan.</p>
-
-        <div class="preview-grid">
-          <div class="preview-box">
-            <h3>Galeri Sistem Terbaru</h3>
-            <div id="galeri-preview" class="preview-content"></div>
-            <a href="galeri.html" class="btn-link">Lihat semua sistem &rarr;</a>
-          </div>
-          <div class="preview-box">
-            <h3>Tulisan Terbaru</h3>
-            <div id="tulisan-preview" class="preview-content"></div>
-            <a href="tulisan.html" class="btn-link"
-              >Lihat semua tulisan &rarr;</a
-            >
-          </div>
+      <section class="container tulisan-preview">
+        <h2>Tulisan Terbaru</h2>
+        <div id="tulisan-preview-grid" class="tulisan-preview-grid">
+          <p class="loading-text">Memuat tulisan...</p>
+        </div>
+        <div class="tulisan-all-link">
+          <a href="tulisan.html" class="btn-link">Lihat Semua Tulisan &rarr;</a>
         </div>
       </section>
     </main>
@@ -66,7 +88,7 @@
       <div class="container">
         <p>
           &copy; 2025 - Museum Digital Pribadi. <br />
-          Diarsipkan dengan ❤️ menggunakan GitHub Pages.
+          Dibuat sebagai arsip abadi. | <a href="tentang.html">Tentang Saya</a>
         </p>
       </div>
     </footer>

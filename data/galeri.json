@@ -1,29 +1,42 @@
 [
   {
     "id": 1,
-    "judul": "Sistem Manajemen Perpustakaan",
-    "deskripsi": "Sistem informasi berbasis web untuk mengelola peminjaman dan pengembalian buku di perpustakaan digital.",
-    "teknologi": ["PHP", "MySQL", "Bootstrap"],
-    "gambar": "https://via.placeholder.com/400x250.png?text=Proyek+Perpustakaan",
-    "link_demo": "#",
-    "link_repo": "https://github.com/username/repo-perpustakaan"
+    "judul": "f-Consult",
+    "deskripsi": "Sistem informasi berbasis web untuk menampilkan informasi layanan konsultan IT.",
+    "teknologi": ["HTML", "CSS", "JavaScript"],
+    "gambar": "assets/images/sistem/f-consult.png",
+    "link_demo": "https://oxyrus69.github.io/f-consult/",
+    "link_repo": "#",
+    "cerita": "berusaha menjadi seorang konsultan amatir, semoga aja ada yang tertarik buat konsul masalah proses bisnis ke digital..."
   },
   {
     "id": 2,
-    "judul": "Aplikasi Kasir (POS)",
-    "deskripsi": "Aplikasi Point of Sale sederhana untuk mengelola transaksi penjualan, stok barang, dan laporan harian.",
-    "teknologi": ["JavaScript", "Node.js", "Electron"],
-    "gambar": "https://via.placeholder.com/400x250.png?text=Proyek+Kasir",
-    "link_demo": "#",
-    "link_repo": "https://github.com/username/repo-pos"
+    "judul": "Bengkel Template",
+    "deskripsi": "Rumah bagi orang-orang yang mencari komponen-komponen menarik buat digabungkan ke proyek.",
+    "teknologi": ["HTML", "CSS", "JavaScript"],
+    "gambar": "assets/images/sistem/bengkel.png",
+    "link_demo": "https://oxyrus69.github.io/portofolio-template/",
+    "link_repo": "#",
+    "cerita": "mencoba membantu orang, tapi gatau siapa orang yang dibantu. perlu dipertimbangkan..."
   },
   {
     "id": 3,
     "judul": "Website Portofolio Pribadi",
     "deskripsi": "Desain dan implementasi website portofolio statis menggunakan HTML, CSS, dan JavaScript murni.",
     "teknologi": ["HTML", "CSS", "JavaScript"],
-    "gambar": "https://via.placeholder.com/400x250.png?text=Proyek+Portofolio",
-    "link_demo": "#",
-    "link_repo": "#"
+    "gambar": "assets/images/sistem/portofolio.png",
+    "link_demo": "https://oxyrus69.github.io/",
+    "link_repo": "#",
+    "cerita": "nampilin karya, kemampuan seadanya. toh ndak ada yang tertarik hihihi..."
+  },
+  {
+    "id": 4,
+    "judul": "Jelajah Filsafat Eksistensialis",
+    "deskripsi": "Jelajahi ide-ide mendalam dari para filsuf Jerman dan eksistensialis yang membentuk pemahaman fla1r tentang kebebasan, makna, dan eksistensi.",
+    "teknologi": ["HTML", "CSS", "JavaScript"],
+    "gambar": "assets/images/sistem/filsafat.png",
+    "link_demo": "https://oxyrus69.github.io/filsuf/",
+    "link_repo": "#",
+    "cerita": "ini energiku buat menghadapi dunia dan makhluk hidup yang chaos..."
   }
 ]

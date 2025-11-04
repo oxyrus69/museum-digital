@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "judul": "Anarkisme, Nihilisme Bias",
+    "deskripsi": "Mayat yang mampu berpikir dan memiliki kesadaran tinggi bagaikan Ubermensch.",
+    "media": "Digital Art (PNG)",
+    "gambar": "assets/images/anarkisme-nihilisme.png",
+    "cerita": "menggambarkan seorang manusia yang menanggung penderitaan batin sepanjang hidupnya."
+  },
+  {
+    "id": 2,
+    "judul": "Dermaga",
+    "deskripsi": "Tempat peristirahatan sementara.",
+    "media": "Fotografi",
+    "gambar": "assets/images/dermaga.jpg",
+    "cerita": "lautan luas, ada banyak sesuatu disana."
+  },
+  {
+    "id": 3,
+    "judul": "Gebrakan",
+    "deskripsi": "Salah satu gerbang penghancuran untuk bertumbuh.",
+    "media": "Digital Art",
+    "gambar": "assets/images/gebrakan.jpg",
+    "cerita": "pernah ikut kegiatan menulis, tapi lupa ngga inget dari organisasi mana."
+  },
+  {
+    "id": 4,
+    "judul": "Imbalan",
+    "deskripsi": "Curhatan seorang anak kecil kepada kakek tua asing.",
+    "media": "Fotografi",
+    "gambar": "assets/images/imbalan.jpg",
+    "cerita": "ngeluh karena pernah berorientasi pada materi diluar diri."
+  },
+  {
+    "id": 5,
+    "judul": "Krisis Ambiguitas",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Digital Art",
+    "gambar": "assets/images/krisis-ambiguitas.jpg",
+    "cerita": "ngegambarin pejuang kesadaran yang bingung sama dirinya sendiri ditengah peperangan."
+  },
+  {
+    "id": 6,
+    "judul": "Kunci",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Fotografi",
+    "gambar": "assets/images/kunci.jpg",
+    "cerita": "ngegambarin kondisi kota yang isinya masyarakat mabuk ketampanan dan kecantikan fana."
+  },
+  {
+    "id": 7,
+    "judul": "Lari Dalam Diam",
+    "deskripsi": "Peperangan batin yang tak kunjung usai.",
+    "media": "Fotografi",
+    "gambar": "assets/images/lari-dalam-diam.jpg",
+    "cerita": "fase mentok ngga tau harus ngapain lagi, meskipun udah berusaha."
+  },
+  {
+    "id": 8,
+    "judul": "Letih",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Fotografi",
+    "gambar": "assets/images/letih.jpg",
+    "cerita": "ngegambarin pejuang kesadaran yang ngelawan populasi, atau seenggaknya sama bayangan dirinya sendiri."
+  },
+  {
+    "id": 9,
+    "judul": "Mata Uang Kutukan",
+    "deskripsi": "Kekhawatiran jangka panjang tentang uang.",
+    "media": "Digital Art",
+    "gambar": "assets/images/mata-uang-kutukan.jpg",
+    "cerita": "manusia nggak bisa lepas dari uang, bahkan menuhankan uang dengan segala cara."
+  },
+  {
+    "id": 10,
+    "judul": "Menari",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Fotografi",
+    "gambar": "assets/images/menari.jpg",
+    "cerita": "seorang diri ngelawan everybody, gitu intinya."
+  },
+  {
+    "id": 11,
+    "judul": "Neo-Logis",
+    "deskripsi": "Perubahan pola pikir manusia digital.",
+    "media": "Digital Art",
+    "gambar": "assets/images/neo-logis.jpg",
+    "cerita": "salah bisa jadi bener, bener bisa jadi salah. siapa yang kuat?"
+  },
+  {
+    "id": 12,
+    "judul": "Penerangan",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Fotografi",
+    "gambar": "assets/images/penerangan.jpg",
+    "cerita": "ngegambarin perwakilan orang mabuk yang digoda dewa."
+  },
+  {
+    "id": 13,
+    "judul": "Penjara Nalar",
+    "deskripsi": "Pikiran yang ditusuk oleh diri sendiri.",
+    "media": "Digital Art",
+    "gambar": "assets/images/penjara-nalar.jpg",
+    "cerita": "karena disana nggak ada yang namanya bener atau salah."
+  },
+  {
+    "id": 14,
+    "judul": "Perihal Sempurna",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Digital Art",
+    "gambar": "assets/images/perihal-sempurna.jpg",
+    "cerita": "populasi di tempat lain yang sama digoda dewa, mabuk kepayang sampe ilang esensi diri."
+  },
+  {
+    "id": 15,
+    "judul": "Prima Supremasi",
+    "deskripsi": "Kekhawatiran orang yang melihat tipu daya diluar.",
+    "media": "Digital Art",
+    "gambar": "assets/images/prima-supremasi.jpg",
+    "cerita": "ada udang dibalik batu, ada entitas yang lebih tinggi dibalik entitas."
+  },
+  {
+    "id": 16,
+    "judul": "Rintik Hujan",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Digital Art (PNG)",
+    "gambar": "assets/images/rintik-hujan.png",
+    "cerita": "ketenangan sebelum kekacauan."
+  },
+  {
+    "id": 17,
+    "judul": "Sains Anarkis",
+    "deskripsi": "Proses penghancuran standar-standar moral.",
+    "media": "Digital Art",
+    "gambar": "assets/images/sains-anarkis.jpg",
+    "cerita": "perjuangan mengubur keyakinan yang diikuti massal."
+  },
+  {
+    "id": 18,
+    "judul": "Sembahan Dimensi",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Digital Art",
+    "gambar": "assets/images/sembahan-dimensi.jpg",
+    "cerita": "penggambaran dari si Hypnus yang menggoda umat."
+  },
+  {
+    "id": 19,
+    "judul": "Sisi-sisi",
+    "deskripsi": "Perang dilematis dalam pikiran.",
+    "media": "Fotografi",
+    "gambar": "assets/images/sisi-sisi.jpg",
+    "cerita": "menderita dan bahagia pada kebebasan."
+  },
+  {
+    "id": 20,
+    "judul": "Terbuka",
+    "deskripsi": "Bagian dari Jalan Mati Hypnus.",
+    "media": "Fotografi",
+    "gambar": "assets/images/terbuka.jpg",
+    "cerita": "sepasang kekasih beradu ego, diketawain Hypnus."
+  },
+  {
+    "id": 21,
+    "judul": "Terjaga",
+    "deskripsi": "Entitas yang melawan Hypnus dan pengikutnya.",
+    "media": "Fotografi",
+    "gambar": "assets/images/terjaga.jpg",
+    "cerita": "jalan kaki di tempat yang sunyi."
+  },
+  {
+    "id": 22,
+    "judul": "Terlalu Terang Dalam Gelap",
+    "deskripsi": "Entitas yang memantau pengikut Hypnus.",
+    "media": "Fotografi",
+    "gambar": "assets/images/terlalu-terang-dalam-gelap.jpg",
+    "cerita": "sedih, tapi kecewa. mau gimana lagi, harus dilalui."
+  }
+]

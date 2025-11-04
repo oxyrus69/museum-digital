@@ -1,8 +1,12 @@
-// Menunggu sampai seluruh halaman HTML dimuat
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. Navigasi Mobile (Hamburger Menu) ---
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
+
+  // --- VARIABEL BARU UNTUK MODAL SENI ---
+  const seniModal = document.getElementById("seni-modal");
+  const modalClose = document.getElementById("modal-close");
+  let seniDataStore = []; // Variabel untuk menyimpan data seni
 
   if (navToggle) {
     navToggle.addEventListener("click", () => {
@@ -12,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- 2. Fungsi Utama untuk Memuat Data ---
-
-  // Fungsi generik untuk mengambil data JSON
   async function fetchData(url) {
     try {
       const response = await fetch(url);
@@ -23,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return await response.json();
     } catch (error) {
       console.error(`Gagal mengambil data dari ${url}:`, error);
-      return null; // Kembalikan null jika gagal
+      return null;
     }
   }
 
@@ -40,29 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
         "<p>Gagal memuat galeri. Silakan coba lagi nanti.</p>";
       return;
     }
-
-    galeriGrid.innerHTML = ""; // Kosongkan tulisan "Memuat..."
-
+    galeriGrid.innerHTML = "";
     data.forEach((proyek) => {
       const card = document.createElement("div");
       card.className = "galeri-card";
-
-      // Buat tag teknologi
       const tagsHtml = proyek.teknologi
         .map((tag) => `<span>${tag}</span>`)
         .join("");
-
       card.innerHTML = `
                 <img src="${proyek.gambar}" alt="${proyek.judul}">
                 <div class="galeri-card-content">
                     <h3>${proyek.judul}</h3>
                     <p>${proyek.deskripsi}</p>
-                    <div class="galeri-card-tags">
-                        ${tagsHtml}
-                    </div>
+                    <p class="galeri-cerita">${proyek.cerita || ""}</p>
+                    <div class="galeri-card-tags">${tagsHtml}</div>
                     <div class="galeri-card-links">
-                        <a href="${proyek.link_demo}" class="btn-link" target="_blank" rel="noopener noreferrer">Lihat Demo</a>
-                        <a href="${proyek.link_repo}" class="btn-link" target="_blank" rel="noopener noreferrer">Lihat Kode</a>
+                        <a href="${
+                          proyek.link_demo
+                        }" class="btn-link" target="_blank" rel="noopener noreferrer">Lihat</a>
+                        
                     </div>
                 </div>
             `;
@@ -83,13 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "<p>Gagal memuat tulisan. Silakan coba lagi nanti.</p>";
       return;
     }
-
-    tulisanList.innerHTML = ""; // Kosongkan tulisan "Memuat..."
-
+    tulisanList.innerHTML = "";
     data.forEach((artikel) => {
       const item = document.createElement("article");
       item.className = "tulisan-item";
-
       item.innerHTML = `
                 <h3>${artikel.judul}</h3>
                 <div class="tulisan-meta">
@@ -103,47 +98,176 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 5. Memuat Pratinjau (index.html) ---
-  const galeriPreview = document.getElementById("galeri-preview");
-  const tulisanPreview = document.getElementById("tulisan-preview");
-
-  if (galeriPreview && tulisanPreview) {
-    loadPratinjau();
+  // --- 5. Memuat Halaman Galeri Seni (seni.html) ---
+  const seniGrid = document.getElementById("seni-grid");
+  if (seniGrid) {
+    loadSeni();
   }
 
-  async function loadPratinjau() {
-    // Muat 2 item galeri terbaru
-    const galeriData = await fetchData("data/galeri.json");
-    if (galeriData) {
-      galeriPreview.innerHTML = ""; // Hapus loading
-      // Ambil 2 item pertama (atau sesuaikan jika perlu)
-      galeriData.slice(0, 2).forEach((proyek) => {
-        const item = document.createElement("a");
-        item.href = "galeri.html"; // Arahkan ke halaman galeri
-        item.className = "preview-item";
-        item.textContent = proyek.judul;
-        galeriPreview.appendChild(item);
-      });
-    } else {
-      galeriPreview.innerHTML = "<p>Gagal memuat pratinjau galeri.</p>";
+  async function loadSeni() {
+    const data = await fetchData("data/seni.json");
+
+    if (!data) {
+      seniGrid.innerHTML =
+        '<p style="color: red;">Error: Gagal memuat data dari data/seni.json. Periksa konsol (F12).</p>';
+      return;
     }
 
-    // Muat 2 tulisan terbaru
+    if (data.length === 0) {
+      seniGrid.innerHTML = "<p>Galeri ini masih kosong.</p>";
+      return;
+    }
+
+    // SIMPAN DATA ke data store
+    seniDataStore = data;
+
+    seniGrid.innerHTML = ""; // Kosongkan grid
+
+    data.forEach((karya) => {
+      const card = document.createElement("div");
+      card.className = "galeri-card";
+      // TAMBAHKAN DATA-ID
+      card.dataset.id = karya.id;
+
+      card.innerHTML = `
+                <img src="${karya.gambar}" alt="${karya.judul}">
+                <div class="galeri-card-content">
+                    <h3>${karya.judul}</h3>
+                    <p>${karya.deskripsi}</p>
+                    <p class="galeri-cerita">${karya.cerita || ""}</p>
+                    <div class="galeri-card-tags">
+                        <span>${karya.media}</span>
+                    </div>
+                </div>
+            `;
+      seniGrid.appendChild(card);
+    });
+  }
+
+  // --- 6. Memuat Pratinjau Tulisan (index.html) ---
+  // MODIFIKASI BESAR DI SINI
+  const tulisanPreviewGrid = document.getElementById("tulisan-preview-grid");
+
+  if (tulisanPreviewGrid) {
+    loadPratinjauTulisan();
+  }
+
+  async function loadPratinjauTulisan() {
     const tulisanData = await fetchData("data/tulisan.json");
+
     if (tulisanData) {
-      tulisanPreview.innerHTML = ""; // Hapus loading
-      tulisanData.slice(0, 2).forEach((artikel) => {
+      tulisanPreviewGrid.innerHTML = ""; // Hapus loading
+
+      // Ambil 3 tulisan pertama (atau berapapun yang Anda mau)
+      tulisanData.slice(0, 3).forEach((artikel) => {
         const item = document.createElement("a");
-        item.href = artikel.link_artikel; // Arahkan ke artikelnya langsung
-        item.className = "preview-item-tulisan";
+        item.href = artikel.link_artikel;
+        item.className = "tulisan-preview-item";
+
         item.innerHTML = `
-                    <strong>${artikel.judul}</strong>
-                    <span>${artikel.tanggal}</span>
+                    <span>${artikel.kategori}</span>
+                    <h4>${artikel.judul}</h4>
                 `;
-        tulisanPreview.appendChild(item);
+        tulisanPreviewGrid.appendChild(item);
       });
     } else {
-      tulisanPreview.innerHTML = "<p>Gagal memuat pratinjau tulisan.</p>";
+      tulisanPreviewGrid.innerHTML = "<p>Gagal memuat pratinjau tulisan.</p>";
     }
+  }
+
+  // --- 7. Memuat Hero Slideshow (index.html) ---
+  const heroSlideshowContainer = document.getElementById(
+    "hero-slideshow-container"
+  );
+  if (heroSlideshowContainer) {
+    loadHeroSlideshow();
+  }
+
+  async function loadHeroSlideshow() {
+    const artData = await fetchData("data/slideshow.json");
+    if (!artData || artData.length === 0) {
+      console.warn("Tidak ada data seni untuk slideshow.");
+      // Jika gagal, setidaknya beri latar belakang darurat
+      heroSlideshowContainer.style.backgroundColor = "#222";
+      return;
+    }
+
+    // 1. Buat elemen slide
+    artData.forEach((karya, index) => {
+      const slide = document.createElement("div");
+      slide.className = "hero-slide";
+      slide.style.backgroundImage = `url('${karya.gambar}')`;
+
+      if (index === 0) {
+        slide.classList.add("active"); // Set slide pertama sebagai aktif
+      }
+      heroSlideshowContainer.appendChild(slide);
+    });
+
+    // 2. Jalankan interval slideshow
+    const slides = heroSlideshowContainer.querySelectorAll(".hero-slide");
+    const slideCount = slides.length;
+    let currentSlide = 0;
+
+    setInterval(() => {
+      // Sembunyikan slide saat ini
+      slides[currentSlide].classList.remove("active");
+
+      // Pindah ke slide berikutnya (atau kembali ke awal)
+      currentSlide = (currentSlide + 1) % slideCount;
+
+      // Tampilkan slide berikutnya
+      slides[currentSlide].classList.add("active");
+    }, 5000); // Ganti gambar setiap 5 detik (5000 ms)
+  }
+
+  // --- LOGIKA BARU UNTUK MODAL DETAIL SENI ---
+
+  // Fungsi untuk membuka modal
+  function openSeniModal(id) {
+    // Cari karya di data store berdasarkan ID
+    const karya = seniDataStore.find((item) => item.id == id);
+    if (!karya) return; // Jika tidak ketemu, jangan lakukan apa-apa
+
+    // Isi data ke elemen modal
+    document.getElementById("modal-img").src = karya.gambar;
+    document.getElementById("modal-img").alt = karya.judul;
+    document.getElementById("modal-title").textContent = karya.judul;
+    document.getElementById("modal-media").textContent = karya.media;
+    document.getElementById("modal-desc").textContent = karya.deskripsi;
+    document.getElementById("modal-story").textContent =
+      karya.cerita || "Tidak ada cerita tambahan untuk karya ini.";
+
+    // Tampilkan modal
+    if (seniModal) seniModal.classList.add("open");
+  }
+
+  // Fungsi untuk menutup modal
+  function closeSeniModal() {
+    if (seniModal) seniModal.classList.remove("open");
+  }
+
+  // Tambahkan event listener ke grid (event delegation)
+  if (seniGrid) {
+    seniGrid.addEventListener("click", (e) => {
+      // Cari elemen .galeri-card terdekat dari target klik
+      const card = e.target.closest(".galeri-card");
+      if (card && card.dataset.id) {
+        openSeniModal(card.dataset.id);
+      }
+    });
+  }
+
+  // Event listener untuk tombol close dan background modal
+  if (modalClose) {
+    modalClose.addEventListener("click", closeSeniModal);
+  }
+  if (seniModal) {
+    seniModal.addEventListener("click", (e) => {
+      // Jika target klik adalah modal background (bukan .modal-content)
+      if (e.target === seniModal) {
+        closeSeniModal();
+      }
+    });
   }
 });

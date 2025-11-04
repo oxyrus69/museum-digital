@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museum Digital - Beranda</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html" class="logo">Museum Digital</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="galeri.html">Galeri Sistem</a></li>
+          <li><a href="tulisan.html">Karya Tulisan</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Buka menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Selamat Datang di Museum Digital Saya.</h1>
+          <p>
+            Ini adalah tempat saya mengarsipkan seluruh perjalanan dan karya,
+            berupa sistem yang pernah saya bangun dan pemikiran yang pernah saya
+            tulis.
+          </p>
+          <div class="hero-buttons">
+            <a href="galeri.html" class="btn btn-primary"
+              >Lihat Galeri Sistem</a
+            >
+            <a href="tulisan.html" class="btn btn-secondary">Baca Tulisan</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container content-preview">
+        <h2>Pratinjau Karya</h2>
+        <p>Beberapa karya terbaru yang telah saya arsipkan.</p>
+
+        <div class="preview-grid">
+          <div class="preview-box">
+            <h3>Galeri Sistem Terbaru</h3>
+            <div id="galeri-preview" class="preview-content"></div>
+            <a href="galeri.html" class="btn-link">Lihat semua sistem &rarr;</a>
+          </div>
+          <div class="preview-box">
+            <h3>Tulisan Terbaru</h3>
+            <div id="tulisan-preview" class="preview-content"></div>
+            <a href="tulisan.html" class="btn-link"
+              >Lihat semua tulisan &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 - Museum Digital Pribadi. <br />
+          Diarsipkan dengan ❤️ menggunakan GitHub Pages.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

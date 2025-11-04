@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "judul": "Mengapa Situs Statis Menjadi Pilihan di Era Modern",
+    "tanggal": "3 November 2025",
+    "kategori": "Teknologi",
+    "ringkasan": "Eksplorasi mendalam tentang kebangkitan 'Static Site Generators' (SSG) dan mengapa developer kembali ke dasar-dasar web untuk kecepatan dan keamanan...",
+    "link_artikel": "#"
+  },
+  {
+    "id": 2,
+    "judul": "Refleksi Perjalanan: 5 Tahun Belajar Koding",
+    "tanggal": "15 Oktober 2025",
+    "kategori": "Pribadi",
+    "ringkasan": "Sebuah catatan pribadi tentang tantangan, kegagalan, dan pencapaian selama lima tahun terakhir di dunia pengembangan perangkat lunak.",
+    "link_artikel": "#"
+  },
+  {
+    "id": 3,
+    "judul": "Memahami Asynchronus pada JavaScript",
+    "tanggal": "28 September 2025",
+    "kategori": "Tutorial",
+    "ringkasan": "Panduan untuk pemula memahami konsep Promise, Async/Await, dan Event Loop yang menjadi inti dari JavaScript modern.",
+    "link_artikel": "#"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "judul": "Sistem Manajemen Perpustakaan",
+    "deskripsi": "Sistem informasi berbasis web untuk mengelola peminjaman dan pengembalian buku di perpustakaan digital.",
+    "teknologi": ["PHP", "MySQL", "Bootstrap"],
+    "gambar": "https://via.placeholder.com/400x250.png?text=Proyek+Perpustakaan",
+    "link_demo": "#",
+    "link_repo": "https://github.com/username/repo-perpustakaan"
+  },
+  {
+    "id": 2,
+    "judul": "Aplikasi Kasir (POS)",
+    "deskripsi": "Aplikasi Point of Sale sederhana untuk mengelola transaksi penjualan, stok barang, dan laporan harian.",
+    "teknologi": ["JavaScript", "Node.js", "Electron"],
+    "gambar": "https://via.placeholder.com/400x250.png?text=Proyek+Kasir",
+    "link_demo": "#",
+    "link_repo": "https://github.com/username/repo-pos"
+  },
+  {
+    "id": 3,
+    "judul": "Website Portofolio Pribadi",
+    "deskripsi": "Desain dan implementasi website portofolio statis menggunakan HTML, CSS, dan JavaScript murni.",
+    "teknologi": ["HTML", "CSS", "JavaScript"],
+    "gambar": "https://via.placeholder.com/400x250.png?text=Proyek+Portofolio",
+    "link_demo": "#",
+    "link_repo": "#"
+  }
+]
